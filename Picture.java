@@ -17,6 +17,9 @@ public class Picture
     private Circle sun;
     private Circle suelo;
     private Person persona;
+    private Circle sun2;
+    private Person persona2;
+    private Person persona3;
 
     /**
      * Constructor for objects of class Picture
@@ -67,6 +70,20 @@ public class Picture
         persona = new Person();
         persona.moveHorizontal(-300);
         persona.makeVisible();
+        
+        sun2 = new Circle();
+        sun2.changeColor("blue");
+        sun2.moveHorizontal(-200);
+        sun2.moveVertical(-30);
+        sun2.changeSize(70);
+       
+        
+        persona2 = new Person();
+        persona2.moveHorizontal(-150);
+        
+        persona3 = new Person();
+        persona3.moveHorizontal(120);
+        
         
         
       
@@ -122,4 +139,27 @@ public class Picture
         persona.slowMoveHorizontal(160);
         
     }
+     /**
+     * aparecen figuras
+     */
+    public void crearfiguras()
+    {
+        sun2.makeVisible();
+        persona2.makeVisible();
+        persona3.makeVisible();
+        
+    }
+    
+     /**
+     * Desaparecen figuras
+     */
+    public void desaparecerfiguras()
+    {
+        sun2.slowMoveVertical(-140);
+        persona2.slowMoveHorizontal(-250);
+        persona3.slowMoveHorizontal(300);
+        
+        
+    }
+        
 }
