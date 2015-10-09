@@ -99,6 +99,13 @@ public class Picture
      * Change the sun up-down
      */
     public void movesun()
-    {   sun.slowMoveVertical(70);
+    {  
+        sun.slowMoveVertical(70);
+        wall.changeColor("black");
+        window.changeColor("white");
+        roof.changeColor("black");
+        sun.changeColor("black");
+        suelo.changeColor("black");
+        
     }
 }
